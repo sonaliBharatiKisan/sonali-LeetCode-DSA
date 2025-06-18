@@ -1,0 +1,38 @@
+BRUTE-FORCE----------O(n log n)+O(n)
+
+class Solution {
+    public int getSecondLargest(int[] arr) {
+        // code here
+        int n=arr.length;
+        int largest=arr[n-1];
+        int sec=0;
+        Arrays.sort(arr);----------------O(n log n)
+        for(int i=n-2;i>0;i--)-----------O(n)
+       { if(arr[i]!=largest)
+       {
+           sec=arr[i];
+           break;
+       }
+    }
+    return sec;
+}}
+
+
+OPTIMAL-------------O(2n)=O(n)
+class Solution {
+    public int getSecondLargest(int[] arr) {
+        // code here
+        int n=arr.length;------------O(n)
+        int sec=-1;
+        int large=arr[0];
+    for(int i=0;i<n;i++){
+        if(arr[i]>large)
+        large=arr[i];
+    }
+    
+    for(int i=0;i<n;i++)---------------O(n)
+        if(arr[i]>sec && arr[i]!=large)
+        sec=arr[i];
+return sec;
+    
+}}
