@@ -1,0 +1,18 @@
+
+class Solution {
+    public List<List<Integer>> getSubArrays(int[] arr) {
+        // code here
+        List<List<Integer>> result=new ArrayList<>();
+        int n=arr.length;
+        for(int i=0;i<n;i++){
+            for(int j=i;j<n;j++){
+                List<Integer> ls=new ArrayList<>();
+                for(int k=i;k<=j;k++){
+                    ls.add(arr[k]);
+                }
+                result.add(ls);
+            }
+        }
+        return result;
+    }
+}
