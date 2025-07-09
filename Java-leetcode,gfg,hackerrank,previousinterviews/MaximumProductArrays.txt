@@ -1,0 +1,21 @@
+MaximumProductArrays--BRUTE
+
+class Solution {
+    int maxProduct(int[] arr) {
+        int n = arr.length;
+        int max = Integer.MIN_VALUE;
+
+        for (int i = 0; i < n; i++) {
+            for (int j = i; j < n; j++) {
+                int product = 1;
+                for (int k = i; k <= j; k++) {
+                    product *= arr[k];
+                }
+                max = Math.max(max, product);
+            }
+        }
+
+        return max;
+    }
+}
+
