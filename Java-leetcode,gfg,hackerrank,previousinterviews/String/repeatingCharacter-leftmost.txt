@@ -1,0 +1,21 @@
+Naive---O(n2)
+// User function Template for Java
+
+class Solution {
+    // Function to find repeated character whose first appearance is leftmost.
+    static int repeatedCharacter(String S) {
+        // add your code here
+        int n=S.length();
+    
+        for(int i=0;i<n;i++){
+            for(int j=i+1;j<n;j++){
+                if(S.charAt(i)==S.charAt(j))
+               { return i;
+            }
+            
+        }
+        }
+        return -1;
+    }
+}
+
