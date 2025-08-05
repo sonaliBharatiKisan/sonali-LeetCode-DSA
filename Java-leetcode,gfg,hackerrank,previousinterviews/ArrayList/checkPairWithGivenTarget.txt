@@ -1,0 +1,21 @@
+// User function Template for Java
+
+class Solution {
+
+    int countPairs(int arr[], int target) {
+        // Complete the function
+        int lp=0;
+        int rp=arr.size()-1;
+        while(lp!=rp){
+        if(lp+rp==target){
+            return true;
+        }
+        if(lp+rp>target){
+            lp++;
+        }
+        else{
+            rp--;
+        }}
+        return false;
+    }
+}
