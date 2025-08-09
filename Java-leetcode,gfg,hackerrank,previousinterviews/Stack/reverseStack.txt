@@ -1,0 +1,14 @@
+
+class Solution {
+    static void reverse(Stack<Integer> St) {
+        // code here
+        ArrayList<Integer> res=new ArrayList<>();
+        while(!St.isEmpty()){
+            res.add(St.pop());
+        }
+        for(int i=0;i<res.size();i++){
+             St.push(res.get(i));
+        }
+        
+    }
+}
