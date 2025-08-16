@@ -1,0 +1,18 @@
+
+class Solution {
+    public int activitySelection(int[] start, int[] finish) {
+        // code here
+        int maxAct=0;
+        ArrayList<Integer>res=new ArrayList<>();
+        maxAct=1;
+        int lastEnd=finish[0];
+        for(int i=1;i<finish.length;i++){
+            if(start[i]>=lastEnd){
+                maxAct++;
+                res.add(i);
+    lastEnd=finish[i];
+            }
+        }
+        return maxAct;
+    }
+}
