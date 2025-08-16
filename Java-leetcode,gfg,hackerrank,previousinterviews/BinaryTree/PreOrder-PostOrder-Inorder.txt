@@ -1,0 +1,48 @@
+preorder
+class Solution {
+    public List<Integer> preorderTraversal(TreeNode root) {
+        ArrayList<Integer> result=new ArrayList<>();
+        preorder(root,result);
+        return result;}
+        private void preorder(TreeNode root,ArrayList result){
+            if(root==null){return ;}
+            result.add(root.val);
+            preorder(root.left,result);
+            preorder(root.right,result);
+        }
+        
+    
+}
+
+------------------------------------------------------
+postorder
+
+class Solution {
+    public List<Integer> postorderTraversal(TreeNode root) {
+        ArrayList<Integer>result=new ArrayList<>();
+        postorder(root,result);
+        return result;}
+        private void postorder(TreeNode root,ArrayList result){
+            if(root==null){return;}
+                postorder(root.left,result);
+                postorder(root.right,result);
+                result.add(root.val);
+        }
+    
+}
+-------------------------------------------------------inorder
+
+class Solution {
+    public List<Integer> inorderTraversal(TreeNode root) {
+        ArrayList<Integer> result=new ArrayList<>();
+        inorder(root,result);
+        return result;}
+        private void inorder(TreeNode root,ArrayList result){
+            if(root==null){return;}
+            inorder(root.left,result);
+            result.add(root.val);
+            inorder(root.right,result);
+        }
+        
+    
+}
