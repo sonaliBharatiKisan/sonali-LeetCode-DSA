@@ -1,0 +1,15 @@
+// User function Template for Java
+
+class Solution {
+    // Just print the space seperated array elements
+    void printArray(int arr[]) {
+        arr(arr,0);
+    }
+    void arr(int arr[],int idx){
+        if(idx==arr.length){
+            return ;
+        }
+        System.out.print(arr[idx]+" ");
+        arr(arr,idx+1);
+    }
+}

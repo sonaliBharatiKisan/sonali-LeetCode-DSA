@@ -1,0 +1,16 @@
+class Solution {
+    public void reverseArray(int arr[]) {
+        // code here
+        int n=arr.length;
+        display(arr,n-1);
+    }
+    void display(int arr[],int idx){
+        if(idx<0){
+            return;
+        }
+         System.out.print(arr[idx]+" ");
+        display(arr,idx-1);
+       
+    }
+    
+}

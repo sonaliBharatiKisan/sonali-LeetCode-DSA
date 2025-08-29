@@ -1,0 +1,18 @@
+class Solution {
+    public static int largest(int[] arr) {
+        // code here
+        return maxi(arr,0);}
+        public static int maxi(int arr[],int idx){
+            if(idx==arr.length-1){
+                return arr[idx];
+            }
+            int masi=maxi(arr,idx+1);
+            if(masi>arr[idx]){
+                return masi;
+            }
+            else{
+                return arr[idx];
+            }
+        }
+    }
+
